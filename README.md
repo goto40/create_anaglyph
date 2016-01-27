@@ -1,2 +1,2 @@
 # create_anaglyph
-Gimp Plugin to create Anaglyphs.
+GIMP Plugin to create Anaglyphs.
