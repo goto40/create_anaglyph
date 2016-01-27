@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Create Anaglyph (GIMP Plugin): Introduction</title>
+<title>Create Anaglyph (GIMP Plugin): Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -48,10 +48,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -71,6 +71,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li class="current"><a href="functions.html"><span>Class&#160;Members</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow3" class="tabs2">
+    <ul class="tablist">
+      <li><a href="functions.html"><span>All</span></a></li>
+      <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
+      <li><a href="functions_vars.html"><span>Variables</span></a></li>
+    </ul>
+  </div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -83,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('functions_func.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -100,31 +114,47 @@ $(document).ready(function(){initNavTree('index.html','');});
 </iframe>
 </div>
 
-<div class="header">
-  <div class="headertitle">
-<div class="title">Introduction </div>  </div>
-</div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The anaglyph Generator generates a stereoscopic anaglyph image from a given layered gray level image. Every layer is assigned a specific depth. This information is then utilized to generate the stereoscopic image.</p><ul>
-<li><a class="el" href="page_usage.html">Usage</a></li>
-<li><a class="el" href="page_installation.html">Installation</a></li>
-<li>Software <a class="el" href="page_architecture.html">Architecture</a> (maintenance)</li>
+&#160;<ul>
+<li>__init__()
+: <a class="el" href="classanaglyph__algorithm_1_1_anaglyph.html#a527fd06e8fbd8d057d54b79d4806a0dc">anaglyph_algorithm.Anaglyph</a>
+, <a class="el" href="classdepth__algorithm_1_1_depth_algo.html#adf1146581f8703fbdb1174bbc3ee02a8">depth_algorithm.DepthAlgo</a>
+</li>
+<li>get_disparity()
+: <a class="el" href="classdepth__algorithm_1_1_depth_algo.html#aeb321abef9d80b71bbc7bf68498d2816">depth_algorithm.DepthAlgo</a>
+</li>
+<li>get_result()
+: <a class="el" href="classanaglyph__algorithm_1_1_anaglyph.html#ad3ed446f1a30202e2a6d1a236ff3e8c4">anaglyph_algorithm.Anaglyph</a>
+</li>
+<li>has_depth()
+: <a class="el" href="classdepth__algorithm_1_1_depth_algo.html#acbbf86ab8782d99a6dca9acddd8e77eb">depth_algorithm.DepthAlgo</a>
+</li>
+<li>has_fixdepthmap()
+: <a class="el" href="classdepth__algorithm_1_1_depth_algo.html#a05f7281b598f63e45da67ca252592619">depth_algorithm.DepthAlgo</a>
+</li>
+<li>has_map()
+: <a class="el" href="classdepth__algorithm_1_1_depth_algo.html#abbff528996cc06cf68a41cf65f4ae080">depth_algorithm.DepthAlgo</a>
+</li>
+<li>has_reldepthmap()
+: <a class="el" href="classdepth__algorithm_1_1_depth_algo.html#a154c2e5a6568fe73d838cbb4b6b1090c">depth_algorithm.DepthAlgo</a>
+</li>
+<li>is_depth_map()
+: <a class="el" href="classdepth__algorithm_1_1_depth_algo.html#a2d2cb63e54b92023c49e625f472d0e26">depth_algorithm.DepthAlgo</a>
+</li>
+<li>shiftx()
+: <a class="el" href="classanaglyph__algorithm_1_1_anaglyph.html#aaa5bebbebb8cc473b35ed37f8a1a502f">anaglyph_algorithm.Anaglyph</a>
+</li>
+<li>shiftx_ext()
+: <a class="el" href="classanaglyph__algorithm_1_1_anaglyph.html#a09eddc90cc5523acf449368dba949444">anaglyph_algorithm.Anaglyph</a>
+</li>
+<li>update()
+: <a class="el" href="classanaglyph__algorithm_1_1_anaglyph.html#accb8a49506ad675c452e2c0edf4f33a5">anaglyph_algorithm.Anaglyph</a>
+</li>
+<li>update_ext()
+: <a class="el" href="classanaglyph__algorithm_1_1_anaglyph.html#a197412cbe573a71f1d4bd7d2bb279fc4">anaglyph_algorithm.Anaglyph</a>
+</li>
 </ul>
-<h3>Example input/output</h3>
-<div class="image">
-<img src="demo500.png" alt="demo500.png"/>
-<div class="caption">
-left: input image, all layers merged. right: generated anaglyph (you need red/cyan glasses)</div></div>
-<h3>Used software:</h3>
-<ul>
-<li><a href="http://www.gimp.org,">http://www.gimp.org,</a> the drawing application "The GIMP".</li>
-<li><a href="http://www.python.org">http://www.python.org</a> to write the software (a GIMP plugin).</li>
-<li><a href="http://www.numpy.org">http://www.numpy.org</a> (python lib) for simple signal/array processing.</li>
-<li><a href="http://de.plantuml.com/">http://de.plantuml.com/</a> to generate UML images.</li>
-<li><a href="http://www.arc42.org/">http://www.arc42.org/</a> software architecture structure.</li>
-<li><a href="http://www.doxygen.org/">http://www.doxygen.org/</a> to generate the documentation. </li>
-</ul>
-</div></div><!-- contents -->
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Create Anaglyph (GIMP Plugin): Introduction</title>
+<title>Create Anaglyph (GIMP Plugin): /home/pierre/checkouts/create_anaglyph/plugin/anaglyph_algorithm.py File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -48,11 +48,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -71,6 +71,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+    </ul>
+  </div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -83,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('anaglyph__algorithm_8py.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -101,34 +106,40 @@ $(document).ready(function(){initNavTree('index.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Introduction </div>  </div>
+<div class="title">anaglyph_algorithm.py File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The anaglyph Generator generates a stereoscopic anaglyph image from a given layered gray level image. Every layer is assigned a specific depth. This information is then utilized to generate the stereoscopic image.</p><ul>
-<li><a class="el" href="page_usage.html">Usage</a></li>
-<li><a class="el" href="page_installation.html">Installation</a></li>
-<li>Software <a class="el" href="page_architecture.html">Architecture</a> (maintenance)</li>
-</ul>
-<h3>Example input/output</h3>
-<div class="image">
-<img src="demo500.png" alt="demo500.png"/>
-<div class="caption">
-left: input image, all layers merged. right: generated anaglyph (you need red/cyan glasses)</div></div>
-<h3>Used software:</h3>
-<ul>
-<li><a href="http://www.gimp.org,">http://www.gimp.org,</a> the drawing application "The GIMP".</li>
-<li><a href="http://www.python.org">http://www.python.org</a> to write the software (a GIMP plugin).</li>
-<li><a href="http://www.numpy.org">http://www.numpy.org</a> (python lib) for simple signal/array processing.</li>
-<li><a href="http://de.plantuml.com/">http://de.plantuml.com/</a> to generate UML images.</li>
-<li><a href="http://www.arc42.org/">http://www.arc42.org/</a> software architecture structure.</li>
-<li><a href="http://www.doxygen.org/">http://www.doxygen.org/</a> to generate the documentation. </li>
-</ul>
-</div></div><!-- contents -->
+
+<p><a href="anaglyph__algorithm_8py_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanaglyph__algorithm_1_1_anaglyph.html">anaglyph_algorithm.Anaglyph</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents an algorithm to compute two stereo images from gimp layers and to combine them to an anaglyph.  <a href="classanaglyph__algorithm_1_1_anaglyph.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceanaglyph__algorithm"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanaglyph__algorithm.html">anaglyph_algorithm</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac97daa06a98594c6b2438891f8aed5c5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanaglyph__algorithm.html#ac97daa06a98594c6b2438891f8aed5c5">anaglyph_algorithm.interp2</a> (X, Y, Z)</td></tr>
+<tr class="memdesc:ac97daa06a98594c6b2438891f8aed5c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">interpolates Z at locations X,Y output of function is of shape(X)==shape(Y)  <a href="namespaceanaglyph__algorithm.html#ac97daa06a98594c6b2438891f8aed5c5">More...</a><br /></td></tr>
+<tr class="separator:ac97daa06a98594c6b2438891f8aed5c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="dir_b4c3aec6cd8f28418150dce663061cfa.html">plugin</a></li><li class="navelem"><a class="el" href="anaglyph__algorithm_8py.html">anaglyph_algorithm.py</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

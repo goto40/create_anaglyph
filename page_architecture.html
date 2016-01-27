@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Create Anaglyph (GIMP Plugin): Introduction</title>
+<title>Create Anaglyph (GIMP Plugin): Architecture</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -48,8 +48,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li class="current"><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -83,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('page_architecture.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -102,27 +102,46 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Introduction </div>  </div>
+<div class="title">Architecture </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The anaglyph Generator generates a stereoscopic anaglyph image from a given layered gray level image. Every layer is assigned a specific depth. This information is then utilized to generate the stereoscopic image.</p><ul>
-<li><a class="el" href="page_usage.html">Usage</a></li>
-<li><a class="el" href="page_installation.html">Installation</a></li>
-<li>Software <a class="el" href="page_architecture.html">Architecture</a> (maintenance)</li>
-</ul>
-<h3>Example input/output</h3>
-<div class="image">
-<img src="demo500.png" alt="demo500.png"/>
-<div class="caption">
-left: input image, all layers merged. right: generated anaglyph (you need red/cyan glasses)</div></div>
-<h3>Used software:</h3>
+<div class="textblock"><p>This page describes the architecture of the software.</p>
+<p>It helps modifying and maintaining the software. It also demonstrates how to combine numpy (or scipy) with gimp (<a class="el" href="gimpfu__numpy__converter_8py.html">gimpfu_numpy_converter.py</a>).</p>
+<h3>Goal</h3>
+<p>Create a tool to generate anaglyphs from (scanned) flat images arranged in depth.</p>
+<h3>Constraints</h3>
+<p>The selected solution has the following constraints: Plugins must be written in python or scheme.</p>
+<h3>Context</h3>
+<p>The context of the plugin is gimp (who owns/calls the plugin) and additional required libraries for signal/image processing.</p>
+<h3>Solution</h3>
 <ul>
-<li><a href="http://www.gimp.org,">http://www.gimp.org,</a> the drawing application "The GIMP".</li>
-<li><a href="http://www.python.org">http://www.python.org</a> to write the software (a GIMP plugin).</li>
-<li><a href="http://www.numpy.org">http://www.numpy.org</a> (python lib) for simple signal/array processing.</li>
-<li><a href="http://de.plantuml.com/">http://de.plantuml.com/</a> to generate UML images.</li>
-<li><a href="http://www.arc42.org/">http://www.arc42.org/</a> software architecture structure.</li>
-<li><a href="http://www.doxygen.org/">http://www.doxygen.org/</a> to generate the documentation. </li>
+<li>Real 3D renderer (blender, povray) were considered to be too complex to use for this task.</li>
+<li>A gimp plugin seemed to be a possible solution.<ul>
+<li>It allows easy composition of scanned images.</li>
+<li>It also allows to scan and pre process the images.</li>
+</ul>
+</li>
+</ul>
+<h3>Building Block View</h3>
+<p>The context of the plugin is gimp (who owns/calls the plugin) and additional required libraries. The plugin itself is organized as follows:</p><ul>
+<li>Module <a class="el" href="create__anaglyph__plugin_8py.html">create_anaglyph_plugin.py</a> (component "Plugin"): The main plugin code (control code)</li>
+<li>Module <a class="el" href="anaglyph__algorithm_8py.html">anaglyph_algorithm.py</a> (component "anaglyph_algorithm", class <a class="el" href="classanaglyph__algorithm_1_1_anaglyph.html" title="This class represents an algorithm to compute two stereo images from gimp layers and to combine them ...">anaglyph_algorithm.Anaglyph</a>): the core algorithm</li>
+<li>Module <a class="el" href="depth__algorithm_8py.html">depth_algorithm.py</a> (component "depth_algorithm", class <a class="el" href="classdepth__algorithm_1_1_depth_algo.html" title="This class is responsible to compute the depth of a layer. ">depth_algorithm.DepthAlgo</a>): functions to determine a layers depth</li>
+<li>Module <a class="el" href="gimpfu__numpy__converter_8py.html">gimpfu_numpy_converter.py</a> (component "gimpfu_numpy_converter"): functions to convert from/to gimpfu data structures to/from numpy arrays. <div align="center">
+<img src="inline_umlgraph_1.png" />
+</div>
+</li>
+</ul>
+<h3>Runtime View</h3>
+<p>Here we sketch the activities executed by the plugin (<a class="el" href="namespacecreate__anaglyph__plugin.html#a4fb9cf65151251d8c3770cb86ebd1548" title="Plugin main function. ">create_anaglyph_plugin.run</a>). The colors match the components corresponding to the described modules above. </p><div align="center">
+<img src="inline_umlgraph_2.png" />
+</div>
+<h3>Deployment View:</h3>
+<p>(see <a class="el" href="page_installation.html">Installation</a>)</p>
+<h3>Concepts</h3>
+<ul>
+<li>Data is converted from the gimp format to numpy and back.</li>
+<li>Algorithms process on numpy arrays. </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
