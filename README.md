@@ -13,6 +13,7 @@ The plugin and the plugin code, both, are described as doxygen documentation inc
  * Usage
  * Installation
  * Architecture
+
 Note: This small example demonstrates 
  * how to combine the python libraries numpy with GIMP (see API doc). 
  * how to use doxygen with python (see API doc).
