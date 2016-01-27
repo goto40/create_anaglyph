@@ -1,0 +1,3 @@
+cd doc
+doxygen Doxyfile
+cd ..
