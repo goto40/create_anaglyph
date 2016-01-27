@@ -9,7 +9,7 @@ Left: input image (all layers merged), right: output anaglyph (you need red/cyan
 Examples with depth maps (you need red/cyan glasses):
 ![Example Anaglyphs with depth maps](/doc/images/depthmaps500.png?raw=true "Examples with depth maps (you need red/cyan glasses)")
 ## Documentation
-The plugin and the plugin code, both, are described as doxygen documentation included in the source files.
+The plugin and the plugin code, both, are described as [doxygen documentation](http://goto40.github.io/create_anaglyph/) included in the source files.
  * Usage
  * Installation
  * Architecture
