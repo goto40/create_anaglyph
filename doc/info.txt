@@ -1,0 +1,2 @@
+git clone -b gh-pages https://github.com/goto40/create_anaglyph.git --single-branch doc/html/
+
