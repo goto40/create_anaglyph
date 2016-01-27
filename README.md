@@ -1,7 +1,7 @@
 # GIMP Plugin "create_anaglyph"
 GIMP Plugin to create Anaglyphs.
 ## Caution
-The anaglyphs (stereo images) generated with this plugin may cause eyestrain or headache. Do not look too long at these images, especially if you compose images with conflicting depth cues: e.g. stereoscopic depths information conflicting with (unlogical) occlusion information. 
+The anaglyphs (stereo images) generated with this plugin may cause eyestrain or headache. Do not look too long at these images, especially if you compose images with conflicting or imperfect depth cues: e.g. stereoscopic depths information conflicting with (unlogical) occlusion information. 
 ## Examples
 Left: input image (all layers merged), right: output anaglyph (you need red/cyan glasses):
 ![Example Anaglyph](/doc/images/demo500.png?raw=true "Left: input image (all layers merged), right: output anaglyph (you need red/cyan glasses)")
@@ -13,3 +13,7 @@ The plugin and the plugin code, both, are described as doxygen documentation inc
  * Usage
  * Installation
  * Architecture
+Note: This small example demonstrates 
+ * how to combine the python libraries numpy with GIMP (see API doc). 
+ * how to use doxygen with python (see API doc).
+ * how to use UMLPlant with doxygen and python (see API doc; manual adaptation of the doc/Doxyfile to your system is necessary).
