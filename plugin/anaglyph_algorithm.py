@@ -73,7 +73,7 @@ class Anaglyph:
         h = layer_data.shape[0]
         w = layer_data.shape[1]
         if layer_data.shape[2]==1:
-            tmp = numpy.ones((h,w,2))
+            tmp = numpy.ones((h,w,2))*255.0
             tmp[:,:,1]=numpy.reshape(layer_data,(h,w))
             layer_data=tmp
         if self.left==None:
