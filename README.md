@@ -8,6 +8,9 @@ Left: input image (all layers merged), right: output anaglyph (you need red/cyan
 
 Examples with depth maps (you need red/cyan glasses):
 ![Example Anaglyphs with depth maps](/doc/images/depthmaps500.png?raw=true "Examples with depth maps (you need red/cyan glasses)")
+
+Example of a simple comic strip (you need red/cyan glasses):
+![Example of a simple comic strip](/doc/images/comicdemo.png?raw=true "Example of a simple comic strip (you need red/cyan glasses)")
 ## Documentation
 The plugin and the plugin code, both, are described as [doxygen documentation](http://goto40.github.io/create_anaglyph/) included in the source files.
  * Usage
@@ -15,6 +18,6 @@ The plugin and the plugin code, both, are described as [doxygen documentation](h
  * Architecture
 
 Note: This small example demonstrates 
- * how to combine the python libraries numpy with GIMP (see API doc). 
- * how to use doxygen with python (see API doc).
- * how to use UMLPlant with doxygen and python (see API doc; manual adaptation of the doc/Doxyfile to your system is necessary).
+ * how to combine the python libraries numpy with GIMP (see [API doc](http://goto40.github.io/create_anaglyph/)). 
+ * how to use doxygen with python (see [API doc](http://goto40.github.io/create_anaglyph/)).
+ * how to use UMLPlant with doxygen and python (see [API doc](http://goto40.github.io/create_anaglyph/); manual adaptation of the doc/Doxyfile to your system is necessary).
