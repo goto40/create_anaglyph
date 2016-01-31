@@ -17,11 +17,14 @@ class DepthAlgo:
         self.maxdisp = maxdisp
         self.n=0
         self.depthmaps={}
+        self.normallayers=[]
         for layer in reversed(gimp_image.layers):
             m = self.is_depth_map(layer) 
             isnormal = not( m or self.has_fixdepthmap(layer) or self.has_depth(layer))
             if isnormal:
+                #print("normal layer: %s --> %d"%(layer.name,self.n))
                 self.n+=1
+                self.normallayers.insert(0,layer)
             elif m:
                 data = layer2array(layer, dtype=numpy.float)
                 data = data[:,:,0]
@@ -31,6 +34,7 @@ class DepthAlgo:
                 ma = float(m.group(3))
                 assert(ma>mi)
                 self.depthmaps[m.group(1)] = mi+data*(ma-mi)
+        #print("layer count n==%d"%(self.n))
 
 
     def is_depth_map(self, gimp_layer):
@@ -110,8 +114,16 @@ class DepthAlgo:
             m=self.has_depth(gimp_layer)
             if (m):
                 d = float(m.group(1))
-                print("detected fixed depth: %s=rel. %f"%(gimp_layer.name,d))
+                #print("detected fixed depth: %s=rel. %f"%(gimp_layer.name,d))
+            else:
+                idx = self.normallayers.index(gimp_layer) # raises exception on error
+                if self.n>1:
+                    d = float(idx)/float(self.n-1)
+                else:
+                    d = 0
+
             d = self.mindisp+float(self.maxdisp-self.mindisp)*d
+            #print("***** depth, idx=%d, d=%f"%(idx,d))
             return int(0.5+d*self.gimp_image.width/100.0)
             
 

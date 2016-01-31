@@ -24,8 +24,10 @@ def run(timg, tdrawable, mindisp, maxdisp,f1,f2,swap_lr):
 
             # update algo and progress bar        
             if (depthalgo.has_map(layer)):
+                print("%s --> special"%(layer.name))
                 anaglyph.update_ext(mf,d)
             else:
+                print("%s --> %f"%(layer.name,d))
                 anaglyph.update(mf,d)
 
             pdb.gimp_progress_update(float(n)/float(nmax))
