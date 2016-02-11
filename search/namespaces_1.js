@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['anaglyph_5falgorithm',['anaglyph_algorithm',['../namespaceanaglyph__algorithm.html',1,'']]]
+  ['create_5fanaglyph_5fplugin',['create_anaglyph_plugin',['../namespacecreate__anaglyph__plugin.html',1,'']]]
 ];

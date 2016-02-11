@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_5fdoc_2epy',['_doc.py',['../__doc_8py.html',1,'']]]
+  ['anaglyph_5falgorithm_2epy',['anaglyph_algorithm.py',['../anaglyph__algorithm_8py.html',1,'']]]
 ];

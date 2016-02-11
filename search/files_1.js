@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['anaglyph_5falgorithm_2epy',['anaglyph_algorithm.py',['../anaglyph__algorithm_8py.html',1,'']]]
+  ['create_5fanaglyph_5fplugin_2epy',['create_anaglyph_plugin.py',['../create__anaglyph__plugin_8py.html',1,'']]]
 ];

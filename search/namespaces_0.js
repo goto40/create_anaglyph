@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_5fdoc',['_doc',['../namespace__doc.html',1,'']]]
+  ['anaglyph_5falgorithm',['anaglyph_algorithm',['../namespaceanaglyph__algorithm.html',1,'']]]
 ];

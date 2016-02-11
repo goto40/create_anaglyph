@@ -11,5 +11,6 @@ var classdepth__algorithm_1_1_depth_algo =
     [ "gimp_image", "classdepth__algorithm_1_1_depth_algo.html#a070ace101e1cab703245a0f54e58e391", null ],
     [ "maxdisp", "classdepth__algorithm_1_1_depth_algo.html#a365d7a122ef6cfc3bf966d4148435ca8", null ],
     [ "mindisp", "classdepth__algorithm_1_1_depth_algo.html#a858c51a34dd4a45dd19138fa7c243f4e", null ],
-    [ "n", "classdepth__algorithm_1_1_depth_algo.html#a3186f20857d635e5e9b245b1369c00d9", null ]
+    [ "n", "classdepth__algorithm_1_1_depth_algo.html#a3186f20857d635e5e9b245b1369c00d9", null ],
+    [ "normallayers", "classdepth__algorithm_1_1_depth_algo.html#af38139319c20592d423209e990c033e5", null ]
 ];
