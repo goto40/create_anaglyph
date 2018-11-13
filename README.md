@@ -13,7 +13,7 @@ Example of a simple comic strip (you need red/cyan glasses):
 ![Example of a simple comic strip](/doc/images/comicdemo.png?raw=true "Example of a simple comic strip (you need red/cyan glasses)")
 
 Example of overlapping flat rectangles (you need red/cyan glasses):
-![Example](/doc/images/mdriven_maxDisp1_2048.png?raw=true "Example of overlapping flat rectangles (you need red/cyan glasses)")
+![Example](/doc/images/mdriven_maxDisp1.png?raw=true "Example of overlapping flat rectangles (you need red/cyan glasses)")
 
 ## Documentation
 The plugin and the plugin code, both, are described as [doxygen documentation](http://goto40.github.io/create_anaglyph/) included in the source files.
